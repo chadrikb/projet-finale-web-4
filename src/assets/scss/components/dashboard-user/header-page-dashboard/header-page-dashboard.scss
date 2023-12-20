@@ -1,0 +1,33 @@
+// Style pour le header du dashboard
+// -----------------------------
+// Nom: Chadrik Bertrand
+// Matricule: 2037079
+div.main {
+    width: 100%;
+    div.entete-dashboard {
+        background-color: var(--orangeFonce);
+        width: 100%;
+        height: 175px;
+        @extend .row, .gx-0;
+
+        & div.rectangle-gauche {
+            @extend .col-3;
+            background-color: var(--marine);
+            height: 100%;
+        }
+        & div.profil {
+            @extend .col-9;
+            text-align: center;
+            @include setFlex(column, center, center);
+            margin-top: 10px;
+
+            & div.info-user {
+                width: 100%;
+                @include setFlex(row, center, center);
+                & h1 {
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+}

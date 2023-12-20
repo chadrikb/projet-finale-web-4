@@ -1,0 +1,163 @@
+// Style pour le footer du site
+// -----------------------------
+// Nom: Claudia C.Gariépy
+// Matricule: 1474731
+footer.footer {
+    position: relative;
+    margin-top: 150px;
+    background-color: var(--gris);
+    @include setFlex(column, start, center);
+    & > a {
+        & > div.logo-footer {
+            @include setFlex(column, center, center);
+            & > img {
+                width: 150px;
+                height: 90px;
+            }
+        }
+    }
+    & > div.liens-sous-menu {
+        @include setFlex(column, center, center);
+        width: 100%;
+        margin-top: 3rem;
+        background-color: black;
+        & div.routerLink a {
+            display: block;
+            color: white;
+            padding: {
+                top: 2rem;
+                left: 3rem;
+                right: 3rem;
+                bottom: 2rem;
+            }
+        }
+    }
+    & div.footer-autres {
+        @include setFlex(column, center, center);
+        width: 100%;
+        margin-bottom: 5rem;
+        & > p {
+            margin-top: 5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-family: "Urbanist", sans-serif;
+        }
+        & > div.hyperliens-medias {
+            @include setFlex(row, start, center);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            & div.hyperlien img {
+                width: 65px;
+                height: 65px;
+            }
+        }
+    }
+}
+
+@include breakpoint-min(768) {
+    footer.footer {
+        & > div.liens-sous-menu {
+            & div.routerLink a {
+                padding: {
+                    left: 4rem;
+                    right: 4rem;
+                }
+            }
+        }
+        & div.footer-autres {
+            & > div.hyperliens-medias {
+                & div.hyperlien img {
+                    width: 90px;
+                    height: 90px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint-min(1200) {
+    footer.footer {
+        margin-top: 150px;
+        @include setFlex(row, start, center);
+        & > div.logo-footer {
+            width: 20%;
+        }
+        & > div.liens-sous-menu {
+            width: 55%;
+            @include setFlex(row, center, start);
+            flex-wrap: wrap;
+            margin-top: 0rem;
+            gap: 2rem;
+            & div.routerLink a {
+                display: block;
+                padding: {
+                    top: 2rem;
+                    left: 1rem;
+                    right: 1rem;
+                    bottom: 2rem;
+                }
+            }
+        }
+        & div.footer-autres {
+            @include setFlex(column, center, center);
+            width: 25%;
+            margin-bottom: 0rem;
+            & > p {
+                text-align: center;
+                margin-top: 3.2rem;
+                margin-bottom: 1.5rem;
+            }
+            & > div.hyperliens-medias {
+                @include setFlex(row, center, center);
+                & div.hyperlien img {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint-min(1400) {
+    footer.footer {
+        margin-top: 150px;
+        @include setFlex(row, start, center);
+        & > div.logo-footer {
+            width: 15%;
+        }
+        & > div.liens-sous-menu {
+            width: 55%;
+            @include setFlex(row, center, start);
+            flex-wrap: wrap;
+            margin-top: 0rem;
+            gap: 2rem;
+            & div.routerLink a {
+                display: block;
+                padding: {
+                    top: 2rem;
+                    left: 1rem;
+                    right: 1rem;
+                    bottom: 2rem;
+                }
+            }
+        }
+        & div.footer-autres {
+            @include setFlex(column, center, center);
+            width: 30%;
+            margin-bottom: 0rem;
+            & > p {
+                text-align: center;
+                margin-top: 3.2rem;
+                margin-bottom: 1.5rem;
+            }
+            & > div.hyperliens-medias {
+                @include setFlex(row, center, center);
+                & div.hyperlien img {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+    }
+}

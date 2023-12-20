@@ -1,0 +1,20 @@
+// Style pour les dates du calendrier
+// -----------------------------
+// Nom: Chadrik Bertrand
+// Matricule: 2037079
+div.date-calendrier {
+    & h2.date {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: aquamarine;
+        position: relative;
+        font-size: 2em;
+        font-weight: bold;
+        & div.love {
+            position: absolute;
+            bottom: -25px;
+            left: -6px;
+        }
+    }
+}

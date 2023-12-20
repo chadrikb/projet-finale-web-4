@@ -1,0 +1,261 @@
+ // iStyle pour la couche d'hébergement
+// -----------------------------
+// Nom: Claudia C.Gariépy
+// Matricule: 1474731
+
+
+ /* Pour Firefox */
+@-moz-keyframes my-animation {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-100%); }
+}
+  
+  /* Pour Chrome */
+@-webkit-keyframes my-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+}
+  
+@keyframes my-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+}    
+  
+div.hebergements {
+    position: relative; 
+    @include setFlex(column, start, start);    
+    & > div.bloc-gauche {
+        position: relative;
+        & > div h1 {
+            font-size: 40px;
+            font-weight: 900;
+            margin-left: 2rem;
+        }
+        & > div.wrapper-pointille {
+            position: absolute;
+            top: 35px;
+            right: 0;
+            z-index: -1;
+        }
+        & > div.nomAuberge {
+            @include setFlex(row, start, center);
+            margin: {
+                top: 4rem;
+                left: 28px;
+                right: 2rem;
+                bottom: 1.5rem;
+            }
+            & > h3 {
+                margin-left: 8px;
+                font-size: 30;
+                line-height: 1;
+                font-weight: 500;
+            }
+        }
+        & div p.paragrapheCommun{
+            margin : {
+                left: 2rem;
+                right: 2rem;
+            };
+        }
+        & > div.infos-sup div.paragrapheSlot{
+            font-weight: bold;
+            margin: {
+                left: 2rem;
+                right: 2rem;
+            };
+        }
+        & > div.boutons-actions {
+            text-align: center;
+            margin: {
+                top: 3rem;
+                left: auto;
+                right: auto;
+            };
+        }
+    }
+    & > div.bloc-droit {
+        position: relative;
+        width: 100%;
+        @include setFlex(row, start, start);
+        & > img {
+            margin-top: 2rem;
+            width: 100%;
+        }
+        & > svg.fleche-next{
+            position: absolute;
+            right: 0;
+            top: 150px;
+        }
+    }
+    & > div.scroll-text {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        background-color: var(--marine);    
+        & h1 {
+            margin-top: 3.5rem;
+            font-size: 40px;
+            font-weight: 900;
+            color: white;
+            -moz-transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+            
+            -moz-animation: my-animation 15s linear infinite;
+            -webkit-animation: my-animation 15s linear infinite;
+            animation: my-animation 15s linear infinite;
+        }
+    }   
+}
+
+@include breakpoint-min(576){
+    div.hebergements {
+        & > div.bloc-gauche {
+            & > div h1 {
+                font-size: 60px;
+            }
+            & > div.wrapper-pointille {
+                top: 60px;
+                right: 5%;
+            }
+            & > div.nomAuberge {
+                margin: {
+                    top: 5rem;
+                }
+                & > h3 {
+                    font-size: 36px;
+                }
+            }
+        }
+        & > div.bloc-droit {
+            & > svg.fleche-next{
+                top: 220px;
+                width: 60px;
+                height: 60px;
+            }
+        }
+        & > div.scroll-text {
+            & h1 {
+                margin-top: 3rem;
+                margin-bottom: 3rem;
+                font-size: 60px;
+            }
+        }   
+    }
+}
+
+@include breakpoint-min(992){
+    div.hebergements {
+        @include setFlex(row, start, start);  
+        padding-bottom: 16rem;  
+        & > div.bloc-gauche {
+            width: 65%;
+            & > div.wrapper-pointille {
+                right: 10%;
+            }
+            & > div.boutons-actions {
+                margin: {
+                    left: 2rem;;
+                };
+            }
+        }
+        & > div.bloc-droit {
+            width: 35%;
+            & > img {
+                margin-top: 60%;
+                height: 350px;
+                object-fit: cover;
+            }
+            & > svg.fleche-next{
+                position: absolute;
+                top: 62%;
+            }
+        }
+        & > div.scroll-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            & h1 {
+                margin-top: 3.5rem;
+                font-weight: 900;
+            }
+        }   
+    } 
+}
+@include breakpoint-min(1200){
+    div.hebergements {
+        @include setFlex(row, start, start);  
+        padding-bottom: 17rem;  
+        & > div.bloc-gauche {
+            width: 55%;
+            & div p.paragrapheCommun{
+                margin : {
+                    left: 2rem;
+                    right: 3rem;
+                };
+            }
+            & > div.wrapper-pointille {
+                position: absolute;
+                top: 60px;
+                right: -20%;
+                z-index: -1;
+            }
+        }
+        & > div.bloc-droit {
+            width: 45%;
+            & > img {
+                margin-top: 30%;
+                height: 450px;
+                object-fit: cover;
+            }
+        }  
+    } 
+}
+@include breakpoint-min(1920){
+    div.hebergements {
+        @include setFlex(row, start, start);  
+        padding-bottom: 17rem;  
+        & > div.bloc-gauche {
+            width: 60%;
+            & > div h1 {
+                font-size: 90px;
+                font-weight: 900;
+                margin-left: 2rem;
+            }
+            & > div.wrapper-pointille {
+                top: 100px;
+                right: 10%;
+            }
+            & div p.paragrapheCommun{
+                margin : {
+                    right: 6rem;
+                };
+            }
+        }
+        & > div.bloc-droit {
+            width: 40%;
+            & > img {
+                margin-top: 24%;
+            }
+        }
+        & > div.scroll-text {
+            position: absolute;
+            width: 100vw;
+            overflow: hidden;
+            background-color: var(--noir);    
+            & h1 {
+                font-size: 60px;
+            }    
+        }     
+    } 
+}
+

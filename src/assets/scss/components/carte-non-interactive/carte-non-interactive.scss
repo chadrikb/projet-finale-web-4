@@ -1,0 +1,118 @@
+// style carte non interactive
+// -----------------------------
+// Nom: Chadrik Bertrand
+// Matricule: 2037079
+
+// -----------------------------
+// Section mobile
+// -----------------------------
+div.carte-static {
+    @include setFlex(column, center, center);
+    width: 100%;
+    background-color: rgba(180, 180, 180, 0.349);
+    & div.wrapper-carte {
+        @include setFlex(column, center, center);
+        width: 100%;
+    }
+    & img {
+        width: 80%;
+    }
+
+    & div.region {
+        margin-top: 20px;
+        @include setFlex(column, center, center);
+        background-color: var(--noir);
+        width: 100%;
+        & h1 {
+            font-size: 2.5em;
+            color: var(--blanc);
+            text-align: center;
+        }
+    }
+}
+// -----------------------------
+// Breakpoint 576px
+// -----------------------------
+@include breakpoint-min(576) {
+    div.carte-static {
+        width: 100%;
+        & div.wrapper-carte {
+            @include setFlex(column, center, center);
+            width: 100%;
+        }
+        & div.region {
+            margin: 0;
+            @include setFlex(column, center, center);
+            background-color: var(--noir);
+            & h1 {
+                font-size: 3em;
+                color: var(--blanc);
+                text-align: center;
+            }
+        }
+    }
+}
+
+// -----------------------------
+// Section breakpoint 992px
+// -----------------------------
+@include breakpoint-min(992) {
+    div.carte-static {
+        @include setFlex(row, center, center);
+        width: 100%;
+        & div.wrapper-carte {
+            @include setFlex(column, center, center);
+            width: 50%;
+        }
+
+        & div.region {
+            @include setFlex(column, center, center);
+            background-color: var(--noir);
+            width: 50%;
+            height: 450px;
+            & h1 {
+                font-size: 4em;
+                color: var(--blanc);
+                text-align: center;
+            }
+        }
+    }
+}
+
+// -----------------------------
+// breakpoint 1200px
+// -----------------------------
+@include breakpoint-min(1200) {
+    div.carte-static {
+        & div.region {
+            @include setFlex(column, center, center);
+            background-color: var(--noir);
+            width: 50%;
+            height: 550px;
+            & h1 {
+                font-size: 4em;
+                color: var(--blanc);
+                text-align: center;
+            }
+        }
+    }
+}
+
+// -----------------------------
+// breakpoint 1920px
+// -----------------------------
+@include breakpoint-min(1920) {
+    div.carte-static {
+        & div.region {
+            @include setFlex(column, center, center);
+            background-color: black;
+            width: 50%;
+            height: 650px;
+            & h1 {
+                font-size: 4em;
+                color: white;
+                text-align: center;
+            }
+        }
+    }
+}

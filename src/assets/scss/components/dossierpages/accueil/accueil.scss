@@ -1,0 +1,669 @@
+// Style pour les cercles de la page accueil
+// -----------------------------
+// Nom: Claudia C.Gariépy
+// Matricule: 1474731
+header.accueil {
+    position: relative;
+    & > div.absolut {
+        & > svg.cercleSvgCommun:nth-child(1) {
+            position: absolute;
+            left: 0;
+            top: -40px;
+            z-index: -20;
+        }
+        & > svg.cercleSvgCommun:nth-child(2) {
+            position: absolute;
+            right: 15vw;
+            top: 2rem;
+        }
+        & > svg.cercleSvgCommun:nth-child(3) {
+            position: absolute;
+            left: 32vw;
+            top: 9.1rem;
+            z-index: -1;
+        }
+        & > svg.cercleSvgCommun:nth-child(4) {
+            position: absolute;
+            z-index: -19;
+            left: 25vw;
+            top: 17.3rem;
+        }
+        & > div.wrapper-pointille {
+            display: none;
+        }
+        & > svg.carreSvgCommun {
+            display: none;
+        }
+    }
+    & > div.entete {
+        & > div.wrapper-grille-images {
+            position: relative;
+            z-index: -10;
+        }
+        & > div.slogan {
+            position: absolute;
+            top: 170px;
+            left: 11vw;
+            & span.contraste {
+                color: var(--blanc);
+            }
+            & > h1:nth-child(1),
+            h1:nth-child(2) {
+                font-size: 35px;
+                font-weight: 700;
+                text-align: center;
+                margin: {
+                    top: 0;
+                    bottom: 0;
+                }
+                color: var(--orange);
+            }
+            & > h1:nth-child(3) {
+                font-size: 40px;
+                font-weight: 900;
+                text-align: center;
+                margin: {
+                    top: 0;
+                    bottom: 0;
+                }
+                color: var(--orange);
+            }
+            & > h1:nth-child(4) {
+                display: none;
+            }
+        }
+        & > div.paragrapheSlot {
+            margin: {
+                top: 3rem;
+            }
+            & > p {
+                margin-bottom: 7rem;
+            }
+        }
+    }
+}
+div.sous-fold {
+    position: relative;
+    @include setFlex(column, start, start);
+    & span.gras {
+        font-weight: 700;
+    }
+    & > div.decouvrez {
+        position: relative;
+        & > img {
+            position: relative;
+            width: 172px;
+            height: 195px;
+            margin: {
+                left: auto;
+                right: auto;
+                bottom: 2.5rem;
+            }
+            object-fit: cover;
+            // &::before {
+            //     content: "";
+            //     width: 160px;
+            //     height: 170px;
+            //     position: absolute;
+            //     top: 0px;
+            //     left: -0px;
+            //     z-index: 10;
+            //     background-color: var(--grisFonce);
+            // }
+            // &::after {
+            //     content: "";
+            //     display: block;
+            //     width: 300px;
+            //     height: 170px;
+            //     position: absolute;
+            //     background-color: black;
+            //     bottom: 0;
+            //     right: 0;
+            //     z-index: 10;
+            // }
+        }
+    }
+    & div.experience {
+        & > img {
+            position: relative;
+            width: 172px;
+            height: 195px;
+            margin: {
+                left: auto;
+                right: auto;
+                bottom: 2.5rem;
+                top: 4rem;
+            }
+            object-fit: cover;
+        }
+    }
+    & > img {
+        display: none;
+    }
+}
+div.inspiration-accueil {
+    margin-top: 200px;
+}
+div.couche-calendrier{
+    margin-top: 230px;
+}
+div.infolettre {
+    margin-top: 250px;
+}
+div.remplissage {
+    margin-top: 200px;
+}
+div.hebergements {
+    margin-top: 200px;
+}
+div.couche-partenaires{
+    margin-top: 250px;
+}
+
+@include breakpoint-min(576) {
+    header.accueil {
+        & > div.absolut {
+            & > svg.cercleSvgCommun:nth-child(1) {
+                left: 8vw;
+            }
+            & > svg.cercleSvgCommun:nth-child(2) {
+                right: 20vw;
+            }
+            & > svg.cercleSvgCommun:nth-child(3) {
+                top: 8.8rem;
+            }
+            & > svg.cercleSvgCommun:nth-child(4) {
+                left: 30vw;
+            }
+            & > div.wrapper-pointille:nth-child(5) {
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 130px;
+            }
+            & > div.wrapper-pointille:nth-child(6) {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 250px;
+            }
+            & > div.wrapper-pointille:nth-child(7) {
+                display: block;
+                position: absolute;
+                right: 12vw;
+                top: 550px;
+            }
+            & > svg.carreSvgCommun:nth-child(8) {
+                display: block;
+                position: absolute;
+                right: 20vw;
+                top: 65%;
+                z-index: -2;
+            }
+            & > svg.carreSvgCommun:nth-child(9) {
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 79%;
+                z-index: -2;
+            }
+        }
+        & > div.entete {
+            & > div.slogan {
+                left: 20vw;
+            }
+            & > div.paragrapheSlot {
+                margin: {
+                    top: 9.5rem;
+                }
+            }
+        }
+    }
+    div.sous-fold {
+        & > div.decouvrez {
+            & > img {
+                width: 220px;
+            }
+        }
+        & div.experience {
+            & > img {
+                width: 220px;
+            }
+        }
+    }
+}
+
+@include breakpoint-min(768) {
+    header.accueil {
+        & > div.absolut {
+            & > svg.cercleSvgCommun:nth-child(1) {
+                left: 10vw;
+                top: -80px;
+            }
+            & > svg.cercleSvgCommun:nth-child(2) {
+                right: 15vw;
+                top: -50px;
+            }
+            & > svg.cercleSvgCommun:nth-child(3) {
+                position: absolute;
+                left: 35vw;
+            }
+            & > svg.cercleSvgCommun:nth-child(4) {
+                left: 25vw;
+                top: 19rem;
+            }
+            & > div.wrapper-pointille:nth-child(5) {
+                right: 8vw;
+                top: 140px;
+            }
+            & > div.wrapper-pointille:nth-child(6) {
+                left: 6vw;
+                top: 290px;
+            }
+            & > div.wrapper-pointille:nth-child(7) {
+                right: 12vw;
+                top: 860px;
+            }
+            & > svg.carreSvgCommun:nth-child(8) {
+                top: 110%;
+            }
+            & > svg.carreSvgCommun:nth-child(9) {
+                top: 125%;
+            }
+        }
+        & > div.entete {
+            & > div.wrapper-grille-images {
+                margin-top: 9rem;
+            }
+            & > div.slogan {
+                top: 180px;
+                left: 25vw;
+                & > h1:nth-child(1),
+                h1:nth-child(2) {
+                    font-size: 47px;
+                }
+                & > h1:nth-child(3) {
+                    font-size: 52px;
+                }
+                & > h1:nth-child(4) {
+                    display: block;
+                    position: absolute;
+                    top: -205px;
+                    right: -55px;
+                    font-size: 220px;
+                    font-weight: 900;
+                    z-index: -5;
+                    color: var(--marine);
+                }
+            }
+            & > div.paragrapheSlot {
+                margin: {
+                    top: 4rem;
+                }
+            }
+        }
+    }
+    div.sous-fold {
+        @include setFlex(row, start, start);
+        & > div.decouvrez {
+            & > img {
+                width: 285px;
+                height: 230px;
+                margin-top: 2rem;
+            }
+        }
+        & div.experience {
+            & > img {
+                width: 285px;
+                height: 230px;
+                margin: {
+                    top: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint-min(992) {
+    header.accueil {
+        & > div.absolut {
+            & > svg.cercleSvgCommun:nth-child(2) {
+                right: 17vw;
+                top: -30px;
+            }
+            & > svg.cercleSvgCommun:nth-child(3) {
+                top: 12rem;
+            }
+            & > svg.cercleSvgCommun:nth-child(4) {
+                left: 28vw;
+                top: 30rem;
+            }
+            & > div.wrapper-pointille:nth-child(5) {
+                right: 5vw;
+                top: 220px;
+            }
+            & > div.wrapper-pointille:nth-child(6) {
+                left: 5vw;
+                top: 435px;
+            }
+            & > div.wrapper-pointille:nth-child(7) {
+                right: 7vw;
+                top: 920px;
+            }
+            & > svg.carreSvgCommun:nth-child(8) {
+                top: 115%;
+                right: 11vw;
+            }
+            & > svg.carreSvgCommun:nth-child(9) {
+                top: 130%;
+            }
+        }
+        & > div.entete {
+            & > div.slogan {
+                top: 230px;
+                left: 19vw;
+                & > h1:nth-child(1),
+                h1:nth-child(2) {
+                    font-size: 80px;
+                }
+                & > h1:nth-child(3) {
+                    font-size: 85px;
+                }
+                & > h1:nth-child(4) {
+                    top: -315px;
+                    right: -85px;
+                    font-size: 350px;
+                    font-weight: 900;
+                }
+            }
+            & > div.paragrapheSlot {
+                position: absolute;
+                top: 700px;
+                left: 2rem;
+                margin: {
+                    right: 55%;
+                }
+            }
+        }
+    }
+    div.sous-fold {
+        margin-top: 22.5rem;
+        @include setFlex(column, start, start);
+        & > div.decouvrez {
+            @include setFlex(row, start, start);
+            flex-flow: row-reverse;
+            margin-right: 5rem;
+            margin-bottom: 3rem;
+            margin-left: 2rem;
+            & > img {
+                width: 285px;
+                height: 270px;
+                margin: {
+                    left: auto;
+                    right: 0rem;
+                    bottom: 0;
+                    top: 0;
+                }
+                object-fit: cover;
+            }
+        }
+        & div.experience {
+            @include setFlex(row, start, start);
+            flex-flow: row-reverse;
+            margin-left: 2rem;
+            margin-right: 5rem;
+            & > img {
+                position: relative;
+                width: 285px;
+                height: 270px;
+                margin: {
+                    left: auto;
+                    right: 0;
+                    bottom: 0;
+                    top: 0;
+                }
+                object-fit: cover;
+            }
+        }
+        & > img {
+            display: none;
+        }
+    }
+}
+
+@include breakpoint-min(1200) {
+    header.accueil {
+        & > div.absolut {
+            & > svg.cercleSvgCommun:nth-child(1) {
+                left: -3vw;
+                top: -155px;
+            }
+            & > svg.cercleSvgCommun:nth-child(2) {
+                right: 9vw;
+            }
+            & > svg.cercleSvgCommun:nth-child(3) {
+                left: 19.5vw;
+            }
+            & > svg.cercleSvgCommun:nth-child(4) {
+                left: 15vw;
+            }
+            & > div.wrapper-pointille:nth-child(5) {
+                right: 0vw;
+            }
+            & > div.wrapper-pointille:nth-child(6) {
+                left: 0;
+            }
+            & > div.wrapper-pointille:nth-child(7) {
+                right: 2vw;
+                top: 880px;
+            }
+            & > svg.carreSvgCommun:nth-child(8) {
+                right: 6vw;
+                top: 110%;
+            }
+            & > svg.carreSvgCommun:nth-child(9) {
+                right: 0vw;
+                top: 125%;
+            }
+        }
+        & > div.entete {
+            margin: {
+                left: 0.6rem;
+            }
+            & > div.wrapper-grille-images {
+                margin {
+                    top: 5rem;
+                }
+            }
+            & > div.slogan {
+                top: 220px;
+                left: 7vw;
+                & > h1:nth-child(1),
+                h1:nth-child(2) {
+                    font-size: 80px;
+                }
+                & > h1:nth-child(3) {
+                    font-size: 85px;
+                }
+                & > h1:nth-child(4) {
+                    top: -315px;
+                    right: -85px;
+                    font-size: 350px;
+                    font-weight: 900;
+                }
+            }
+            & > div.paragrapheSlot {
+                position: absolute;
+                top: 700px;
+                left: 2rem;
+                margin: {
+                    right: 55%;
+                }
+            }
+            & > div.paragrapheSlot:hover span {
+                font-weight: 900;
+            }
+        }
+    }
+    div.sous-fold {
+        & > div.decouvrez {
+            & > img {
+                height: 300px;
+                margin: {
+                    right: 1rem;
+                }
+            }
+            & > div.paragrapheSlot:hover span {
+                font-weight: 900;
+            }
+        }
+        & div.experience {
+            & > img {
+                height: 300px;
+
+                margin: {
+                    right: 1rem;
+                }
+            }
+            & > div.paragrapheSlot:hover span {
+                font-weight: 900;
+            }
+        }
+    }
+}
+
+@include breakpoint-min(1400) {
+    header.accueil {
+        & > div.absolut {
+            & > svg.cercleSvgCommun:nth-child(1) {
+                left: 8vw;
+            }
+            & > svg.cercleSvgCommun:nth-child(3) {
+                left: 22vw;
+            }
+            & > svg.cercleSvgCommun:nth-child(4) {
+                left: 19vw;
+            }
+            & > div.wrapper-pointille:nth-child(5) {
+                right: 0;
+            }
+            & > div.wrapper-pointille:nth-child(6) {
+                left: 3vw;
+            }
+            & > div.wrapper-pointille:nth-child(7) {
+                right: 5vw;
+            }
+            & > svg.carreSvgCommun:nth-child(8) {
+                right: 8vw;
+            }
+            & > svg.carreSvgCommun:nth-child(9) {
+                right: 0;
+            }
+        }
+        & > div.entete {
+            margin: {
+                left: 6rem;
+            }
+            & > div.slogan {
+                top: 220px;
+                left: 13vw;
+            }
+            & > div.paragrapheSlot {
+                position: absolute;
+                top: 690px;
+                left: 2rem;
+                margin: {
+                    right: 50%;
+                }
+            }
+        }
+    }
+    div.sous-fold {
+        & > div.decouvrez {
+            & > img {
+                height: 260px;
+                margin: {
+                    right: 2rem;
+                }
+            }
+        }
+        & div.experience {
+            & > img {
+                height: 260px;
+                margin: {
+                    right: 2rem;
+                }
+            }
+        }
+        & > img {
+            display: none;
+        }
+    }
+}
+
+@include breakpoint-min(1920) {
+    header.accueil {
+        & > div.absolut {
+            & > svg.cercleSvgCommun:nth-child(1) {
+                left: 22vw;
+            }
+            & > svg.cercleSvgCommun:nth-child(2) {
+                left: 50vw;
+            }
+            & > svg.cercleSvgCommun:nth-child(3) {
+                left: 36vw;
+            }
+            & > svg.cercleSvgCommun:nth-child(4) {
+                left: 32vw;
+            }
+            & > div.wrapper-pointille:nth-child(5) {
+                right: 5vw;
+            }
+            & > div.wrapper-pointille:nth-child(6) {
+                left: 21vw;
+            }
+        }
+        & > div.entete {
+            margin: {
+                left: 18rem;
+            }
+            & > div.slogan {
+                left: 28vw;
+            }
+            & > div.paragrapheSlot {
+                left: 25rem;
+                margin: {
+                    right: 44%;
+                }
+            }
+        }
+    }
+    div.sous-fold {
+        & > div.decouvrez {
+            margin-bottom: 2.5rem;
+            margin-left: 15rem;
+            & > img {
+                margin: {
+                    right: 22rem;
+                }
+            }
+        }
+        & div.experience {
+            margin-left: 15rem;
+            & > img {
+                margin: {
+                    right: 22rem;
+                }
+            }
+        }
+        & > img {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 7rem;
+            width: 256px;
+            height: 580px;
+            object-fit: cover;
+        }
+    }    
+}   

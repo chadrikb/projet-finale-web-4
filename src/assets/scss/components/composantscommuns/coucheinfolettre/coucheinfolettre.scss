@@ -1,0 +1,201 @@
+// Style couche infolettre
+// -----------------------------
+// Nom: Claudia C.Gariépy
+// Matricule: 1474731
+div.infolettre {
+    display: none;
+}
+@include breakpoint-min(576){
+    div.infolettre {
+        display: block;
+        position: relative;
+        margin-top: 15rem;
+        & > div.titre-infolettre {
+            @include setFlex(row, center, center);
+            & > div h1 {
+                @include resetBox;
+                font-size: 60px;
+            }
+            & > div:nth-child(1) h1{
+                color: var(--blanc);
+                position: relative;
+                z-index: 2;
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 171px;
+                    height: 171px;
+                    background-color: var(--orange);
+                    position: absolute;
+                    right: 0;
+                    bottom: -25px;
+                    z-index: -1;
+                }
+            }
+        }
+        & > div.bande {
+            width: 100%;
+            height: 156px;
+            margin-top: 75px;
+            background-color: var(--marinePale);
+            & > div.input-email {
+                position: relative;
+                z-index: 20;
+                margin-left: 5rem;
+                color: var(--blanc);
+                & > p {
+                    padding-top: 1.5rem;
+                    font-size: 1.5rem;
+                    font-family: 'Urbanist', sans-serif;
+                }
+                & > input {
+                    padding: 1rem;
+                    font-family: 'Urbanist', sans-serif;
+                }
+                & > input:nth-child(2) {
+                    padding-right: 80px;
+                }
+            }
+        }
+        & div.cercles svg:nth-child(1) {
+            position: absolute;
+            top: -25px;
+            left: -150px;
+            overflow-x: hidden;
+            z-index: 0;
+        }
+        & div.cercles svg:nth-child(2) {
+            position: absolute;
+            top: 180px;
+            left: 5vw;
+            overflow-x: hidden;
+        }
+        & > div.wrapper-pointille:nth-child(4){
+            position: absolute;
+            top: -90px;
+            left: 8vw;
+            z-index: 20;
+        }
+        & > div.wrapper-pointille:nth-child(5){
+            position: absolute;
+            top: 350px;
+            left: 45%;
+            z-index: 10;
+        }
+        & > div.wrapper-pointille:nth-child(6){
+            display: none;
+        }
+    }
+}
+
+@include breakpoint-min(768){
+    div.infolettre {
+        & div.cercles svg:nth-child(1) {
+            left: -100px;
+        }
+        & > div.wrapper-pointille:nth-child(4){
+            left: 19vw;
+        }
+        & > div.wrapper-pointille:nth-child(5){
+            left: 35%;
+        }
+        & > div.wrapper-pointille:nth-child(6){
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 125px
+        }
+    }
+}
+
+@include breakpoint-min(992){
+    div.infolettre {
+        & > div.bande {
+            & > div.input-email {
+                margin-left: 19rem;
+            }
+        }
+        & div.cercles svg:nth-child(1) {
+            left: 20px;
+        }
+        & div.cercles svg:nth-child(2) {
+            left: 20vw;
+        }
+        & > div.wrapper-pointille:nth-child(4){
+            left: 25vw;
+        }
+        & > div.wrapper-pointille:nth-child(5){
+            left: 31%;
+        }
+    } 
+}
+@include breakpoint-min(1200){
+    div.infolettre {
+        & > div.bande {
+            & > div.input-email {
+                margin-left: 34%;
+            }
+        }
+        & div.cercles svg:nth-child(1) {
+            left: 4%;
+        }
+        & > div.wrapper-pointille:nth-child(4){
+            left: 30vw;
+        }
+    } 
+}
+@include breakpoint-min(1400){
+    div.infolettre {
+        & > div.bande {
+            & > div.input-email {
+                margin-left: 36%;
+            }
+        }
+        & div.cercles svg:nth-child(1) {
+            left: 11%;
+        }
+        & > div.wrapper-pointille:nth-child(4){
+            left: 33vw;
+        }
+        & > div.wrapper-pointille:nth-child(5){
+            left: 35%;
+        }
+    } 
+}
+@include breakpoint-min(1920){
+    div.infolettre {
+        display: block;
+        & > div.titre-infolettre {
+            & > div h1 {
+                @include resetBox;
+                font-size: 90px;
+            }
+            & > div:nth-child(1) h1{
+                &::after {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+        & > div.bande {
+            & > div.input-email {
+                margin-left: 38%;
+            }
+        }
+        & div.cercles svg:nth-child(1) {
+            left: 16%;
+        }
+        & > div.wrapper-pointille:nth-child(4){
+            left: 36%;
+        }
+        & > div.wrapper-pointille:nth-child(5){
+            left: 38%;
+        }
+        & > div.wrapper-pointille:nth-child(6){
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 155px
+        }
+    }    
+}

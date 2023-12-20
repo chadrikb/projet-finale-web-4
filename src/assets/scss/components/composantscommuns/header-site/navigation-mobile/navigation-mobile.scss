@@ -1,0 +1,9 @@
+@import "logo-site/logo-site.scss";
+@import "navigation-princ/navigation-princ.scss";
+
+@include breakpoint-min(1200)
+{
+  div.header-site-mobile{
+    display: none;
+  }
+}

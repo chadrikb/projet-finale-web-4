@@ -1,0 +1,31 @@
+// importation du style des components
+// -----------------------------
+// Nom: Chadrik Bertrand
+// Matricule: 2037079
+// -----------------------------
+// Nom: Claudia C.Gariépy
+// Matricule: 1474731
+// @import "navigation-princ/navigation-princ.scss";
+@import "composantscommuns/composantscommuns.scss";
+@import "headers/headers.scss";
+@import "coucheinspirations/coucheinspirations.scss";
+@import "fichesous-categorie/fichesous-categorie.scss";
+@import "connexion-compte/connexion-compte.scss";
+@import "couchehebergements/couchehebergements.scss";
+@import "vignettes-forfait/vignettes-forfait.scss";
+@import "dashboard-user/dashboard-user.scss";
+@import "dossierpages/dossierpages.scss";
+@import "couchecalendrier/couchecalendrier.scss";
+@import "carte-non-interactive/carte-non-interactive.scss";
+@import "footer/footer.scss";
+
+// -----------------------------
+// breakpoints pour la barre grise a gauche
+// -----------------------------
+@include breakpoint-min(1200) {
+  div.interface {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+}

@@ -1,0 +1,191 @@
+// Style pour les pages des sous-catégories
+// -----------------------------
+// Nom: Claudia C.Gariépy
+// Matricule: 1474731
+div.interface > div.main {
+    position: relative;
+    & > header.sous-categorie {
+        position: relative;
+        @include setFlex(row, start, start);
+        & > div.carre-noir {
+            position: absolute;
+            top: 0;
+            width: 20%;
+            height: 1200px;
+            background-color: var(--marine);
+            @include breakpoint-min(576) {
+                height: 1050px;
+                width: 30%;
+            }
+            @include breakpoint-min(992) {
+                height: 1100px;
+                width: 30%;
+            }
+            @include breakpoint-min(1200) {
+                height: 1250px;
+            }
+        }
+        & > div.rectangle-pale {
+            position: relative;
+            top: 7rem;
+            left: 2rem;
+            height: 870px;
+            width: 60%;
+            background-color: var(--gris);
+            @include breakpoint-min(576) {
+                width: 42%;
+            }
+            @include breakpoint-min(1200) {
+                left: 4rem;
+                height: 1030px;
+            }
+            & > div:nth-child(1) h1 {
+                margin: {
+                    top: 3rem;
+                    left: 2rem;
+                    right: 2rem;
+                    bottom: 0;
+                }
+                font-weight: 900;
+                font-size: 32px;
+                @include breakpoint-min(576) {
+                    font-size: 60px;
+                    margin-left: 2rem;
+                }
+                @include breakpoint-min(992) {
+                    margin-left: 4rem;
+                }
+                @include breakpoint-min(1200) {
+                    margin: {
+                        left: 4rem;
+                        right: 3rem;
+                    }
+                }
+                @include breakpoint-min(1920) {
+                    font-size: 90px;
+                }
+            }
+            & > div:nth-child(2) h1 {
+                position: absolute;
+                width: 130%;
+                top: 0;
+                left: 0;
+                margin: {
+                    top: 8rem;
+                    left: 2rem;
+                    right: 2rem;
+                    bottom: 0;
+                }
+                font-weight: 500;
+                font-size: 25px;
+                line-height: 1;
+                letter-spacing: 4px;
+                @include breakpoint-min(576) {
+                    font-size: 40px;
+                    width: 200%;
+                    margin-top: 10rem;
+                    margin-left: 2rem;
+                }
+                @include breakpoint-min(992) {
+                    margin-left: 4rem;
+                }
+                @include breakpoint-min(1200) {
+                    width: 120%;
+                    margin: {
+                        left: 4rem;
+                        right: 3rem;
+                    }
+                }
+                @include breakpoint-min(1920) {
+                    font-size: 60px;
+                    margin-top: 12rem;
+                }
+            }
+            & > img {
+                width: 280px;
+                height: 400px;
+                object-fit: cover;
+                margin: {
+                    top: 8rem;
+                    left: 2rem;
+                }
+                @include breakpoint-min(992) {
+                    width: 400px;
+                    height: 500px;
+                    margin-left: 4rem;
+                }
+            }
+        }
+    }
+    & > div.inspiration-categorie {
+        margin-top: 130px;
+        margin-bottom: 200px;
+        @include breakpoint-min(576) {
+            margin-top: 330px;
+        }
+        @include breakpoint-min(992) {
+            margin-top: 430px;
+        }
+        @include breakpoint-min(1200) {
+            margin-top: 600px;
+        }
+    }
+    & > div.wrapper-sous-sous-categorie {
+        @include setFlex(column, center, center);
+        margin-bottom: 500px;
+        text-align: center;
+        & > div.lien-sous-categorie {
+            width: 80%;
+            margin: {
+                top: 1.5rem;
+            }
+        }
+        @include breakpoint-min(992) {
+            @include setFlex(row, center, start);
+            flex-wrap: wrap;
+            gap: 2rem;
+            & > div.lien-sous-categorie {
+                width: 43%;
+                margin: {
+                    top: 0;
+                }
+            }
+        }
+        @include breakpoint-min(1200) {
+            position: relative;
+            left: 0;
+            @include setFlex(row, end, start);
+            flex-wrap: wrap;
+            & > div.lien-sous-categorie:nth-child(1) {
+                width: 39.4%;
+            }
+            & > div.lien-sous-categorie:nth-child(2) {
+                width: 55%;
+            }
+            & > div.lien-sous-categorie:nth-child(3) {
+                width: 27%;
+            }
+            & > div.lien-sous-categorie:nth-child(4) {
+                width: 67.4%;
+            }
+            & > div.lien-sous-categorie:nth-child(5) {
+                width: 55%;
+            }
+            & > div.lien-sous-categorie:nth-child(6) {
+                width: 39.4%;
+            }
+            & > div.lien-sous-categorie:nth-child(7) {
+                width: 47.2%;
+            }
+            & > div.lien-sous-categorie:nth-child(8) {
+                width: 47.2%;
+            }
+            & > div.lien-sous-categorie:nth-child(9) {
+                width: 67.4%;
+            }
+            & > div.lien-sous-categorie:nth-child(10) {
+                width: 27%;
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+// Style pour la carte interactive
+// -----------------------------
+// Nom: Chadrik Bertrand
+// Matricule: 2037079
+div.interactive {
+    @include setFlex(column, center, center);
+    div.selection {
+        width: 90%;
+        background-color: var(--noir);
+        padding: 50px;
+        & p {
+            text-align: center;
+            color: var(--blanc);
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 30px;
+            &:hover {
+                text-shadow: -10px 5px rgb(126, 126, 126);
+            }
+        }
+    }
+    & div.svg {
+        width: 90%;
+        order: -1;
+        margin: 0 auto;
+        background-color: rgba(180, 180, 180, 0.349);
+        & > svg {
+            margin-bottom: 200px;
+            overflow: visible;
+            width: 65%;
+            height: 65%;
+        }
+    }
+}
+
+@include breakpoint-min(768) {
+    div.interactive {
+        & div.svg {
+            padding-bottom: 40px;
+        }
+    }
+}
+
+@include breakpoint-min(1200) {
+    div.interactive {
+        @include setFlex(row, center, center);
+        height: 630px;
+        position: relative;
+        & div.selection {
+            position: absolute;
+            right: 0;
+            top: 0;
+            @include setFlex(column, center, center);
+            height: 100%;
+            width: 50%;
+            background-color: var(--noir);
+            padding: 52px;
+            & p {
+                color: var(--blanc);
+                font-size: 1.5em;
+                font-weight: bold;
+                margin-bottom: 30px;
+                &:hover {
+                    text-shadow: -10px 5px rgb(126, 126, 126);
+                }
+            }
+        }
+        & div.svg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            order: -1;
+            margin: 0 auto;
+            width: 50%;
+            padding: 0;
+            & > svg {
+                margin-bottom: 200px;
+                overflow: visible;
+                width: 50%;
+                height: 50%;
+            }
+        }
+    }
+}
+@include breakpoint-min(1920) {
+    div.interactive {
+        & div.svg {
+            & > svg {
+                width: 65%;
+                height: 65%;
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+@import "menu-burger/menu-burger.scss";
+nav.nav-principale {
+    div.liste-nav {
+        & > ul {
+            list-style-type: none;
+            & > li {
+                text-align: center;
+                padding: 25px 0;
+                font-weight: 900;
+                & a {
+                    padding: 25px 5px;
+                    & > ul {
+                        font-weight: 500;
+                        background-color: var(--orangeFonce);
+                        width: 100%;
+                        padding: 25px 0;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+.active {
+    background-color: var(--marine);
+    color: white;
+    & > a {
+        display: block;
+    }
+}
+.closed {
+    & > a {
+        display: none;
+    }
+}
+
+.menuOuvert {
+    width: 48px;
+    + div.liste-nav {
+        display: block;
+        & ul li ul {
+            padding: 10px;
+        }
+    }
+}
+.menuFerme {
+    width: 48px;
+    + div.liste-nav {
+        display: none;
+    }
+}

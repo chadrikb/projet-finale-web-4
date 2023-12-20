@@ -1,0 +1,120 @@
+// Style couche pour les partenaires
+// -----------------------------
+// Nom: Claudia C.Gariépy
+// Matricule: 1474731
+div.couche-partenaires {
+    position: relative;
+    background-color: var(--orange);
+    & > div.entetePartenaires {
+        position: relative;
+        & > div h1.titreCommun {
+            position: absolute;
+            top: -50px;
+            left: 0;
+            font-size: 40px;
+            font-weight: 900;
+            line-height: 1;
+            margin: {
+                left: 2rem;
+                right: 2rem;
+            }
+        }
+        & > div.wrapper-pointille {
+            position: absolute;
+            right: 0;
+            top: -20px;
+        }
+    }
+    & div.logos-partenaires {
+        @include setFlex(row, center, start);
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin: {
+            left: 2rem;
+            right: 2rem;
+        }
+        padding-top: 104px;
+        & > img {
+            width: 120px;
+            height: 100px;
+            object-fit: contain;
+        }
+        & > img:nth-child(6) {
+            margin-bottom: 3.5rem;
+        }
+    }
+}
+
+@include breakpoint-min(576) {
+    div.couche-partenaires {
+        & > div.entetePartenaires {
+            & > div h1.titreCommun {
+                top: -75px;
+                font-size: 60px;
+            }
+            div.wrapper-pointille {
+                position: absolute;
+                right: 0;
+                top: -20px;
+            }
+        }
+        & div.logos-partenaires {
+            gap: 2.5rem;
+            padding-top: 5rem;
+        }
+    }
+}
+
+@include breakpoint-min(768) {
+    div.couche-partenaires {
+        & > div.entetePartenaires {
+            div.wrapper-pointille {
+                position: absolute;
+                right: 24%;
+            }
+        }
+        & div.logos-partenaires {
+            margin: {
+                left: 3.5rem;
+                right: 3.5rem;
+            }
+            & > img {
+                width: 150px;
+                height: 100px;
+            }
+        }
+    }
+}
+
+@include breakpoint-min(992) {
+    div.couche-partenaires {
+        & > div.entetePartenaires {
+            div.wrapper-pointille {
+                position: absolute;
+                right: 41%;
+            }
+        }
+    }
+}
+
+@include breakpoint-min(1200) {
+    div.couche-partenaires {
+        & > div.entetePartenaires {
+            div.wrapper-pointille {
+                position: absolute;
+                right: 30%;
+            }
+        }
+    }
+}
+
+@include breakpoint-min(1920) {
+    div.couche-partenaires {
+        & > div.entetePartenaires {
+            & > div h1.titreCommun {
+                top: -115px;
+                font-size: 90px;
+            }
+        }
+    }
+}

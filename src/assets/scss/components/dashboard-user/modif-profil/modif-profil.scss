@@ -1,0 +1,36 @@
+// Style pour la section de modification du profil de l'utilisateur
+// -----------------------------
+// Nom: Chadrik Bertrand
+// Matricule: 2037079
+#modif-profil {
+    & > div {
+        margin-bottom: 40px;
+        margin-left: 20px;
+        > & h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        &:last-child {
+            margin-bottom: 40px;
+        }
+    }
+    & button {
+        margin: 2em 20px;
+    }
+}
+
+@include breakpoint-min(576) {
+    #modif-profil {
+        margin-left: 30%;
+    }
+}
+@include breakpoint-min(1400) {
+    #modif-profil {
+        margin-left: 40%;
+    }
+}
+@include breakpoint-min(1920) {
+    #modif-profil {
+        margin-left: 45%;
+    }
+}

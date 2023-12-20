@@ -1,0 +1,30 @@
+// mixins
+// -----------------------------
+// Nom: Chadrik Bertrand
+// Matricule: 2037079
+// -----------------------------
+// Nom: Claudia C.Gariépy
+// Matricule: 1474731
+
+@mixin setFlex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin debug($color){
+
+    border: 3px solid $color;
+}
+
+@mixin breakpoint-min($screen){
+    @media (min-width: #{$screen}px) {
+        @content;
+    }
+}
+
+@mixin resetBox{
+    padding: 0;
+    margin: 0;
+}

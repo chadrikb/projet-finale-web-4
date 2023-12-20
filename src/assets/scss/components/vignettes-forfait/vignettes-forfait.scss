@@ -1,0 +1,313 @@
+// Style pour les vignettes des forfaits
+// -----------------------------
+// Nom: Chadrik Bertrand
+// Matricule: 2037079
+
+div.vignette-forfait {
+  margin-top: 20px;
+  position: relative;
+  & > div.entete-forfait {
+    padding-bottom: 100px;
+    position: relative;
+    @include setFlex(column, center, start);
+    & h1.titreCommun {
+      position: relative;
+      margin-left: 20px;
+      font-size: 2.5rem;
+      line-height: 0.9em;
+    }
+    & div.wrapper-pointille {
+      position: absolute;
+      top: 35px;
+      right: 0px;
+    }
+    & div.carre-numero {
+      @include setFlex(row, space-between, center);
+      width: 100px;
+      position: absolute;
+      top: 500px;
+      right: 50px;
+      z-index: 1;
+      &::before {
+        content: "";
+        width: 170px;
+        height: 160px;
+        position: absolute;
+        top: -35px;
+        left: -50px;
+        z-index: -3;
+        background-color: var(--gris);
+      }
+      & > h4 {
+        font-family: "Urbanist", sans-serif;
+        color: var(--orangeFonce);
+        font-weight: 900;
+        &::after {
+          content: "";
+          display: block;
+          width: 68%;
+          height: 3px;
+          position: absolute;
+          background-color: var(--orangeFonce);
+          bottom: 14px;
+          left: 14px;
+          z-index: 2;
+        }
+      }
+    }
+  }
+  & div.forfait-contenu {
+    position: relative;
+    @include setFlex(column, start, start);
+    & div.emplacement-forfait {
+      position: relative;
+      z-index: 2;
+      margin-top: 50px;
+      & > p {
+        font-size: 1.5em;
+        font-weight: 600;
+      }
+    }
+    & div.location {
+      position: relative;
+      z-index: 2;
+      & > p {
+        font-size: 0.9em;
+        color: var(--grisFonce);
+      }
+    }
+    & div.nom-forfait {
+      & > p {
+        font-size: 1.2em;
+        font-weight: 500;
+      }
+    }
+    & svg.fleche-next {
+      display: block;
+      align-self: center;
+    }
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 450px;
+    z-index: -1;
+    top: 50px;
+    left: 0px;
+    background-color: var(--gris);
+  }
+}
+
+@include breakpoint-min(576) {
+  div.vignette-forfait {
+    & div.entete-forfait {
+      padding-bottom: 0px;
+      & h1.titreCommun {
+        font-size: 3.5em;
+      }
+      & div.carre-numero {
+        top: 550px;
+      }
+      & div.desc-type-forfait {
+        margin: 20px 0;
+      }
+      & div.wrapper-pointille {
+        right: 25px;
+      }
+      & div.carre-numero {
+        @include setFlex(row, space-between, center);
+        width: 100px;
+        position: absolute;
+        top: 600px;
+        right: 50px;
+        z-index: 1;
+      }
+    }
+    & div.forfait-contenu {
+      & div.emplacement-forfait {
+        margin-top: 35px;
+      }
+      & div.desc-forfait {
+        margin-right: 50px;
+      }
+      & svg.fleche-next {
+        display: block;
+        position: absolute;
+        right: 25px;
+        top: 240px;
+      }
+    }
+    &::after {
+      height: 500px;
+    }
+  }
+}
+@include breakpoint-min(768) {
+  div.vignette-forfait {
+    & div.entete-forfait {
+      padding-bottom: 0px;
+      & h1.titreCommun {
+        font-size: 3.5em;
+      }
+      & div.carre-numero {
+        top: 600px;
+      }
+      & div.desc-type-forfait {
+        margin: 20px 0;
+      }
+      & div.wrapper-pointille {
+        top: 45px;
+      }
+      & div.commun-imageBackground {
+        margin: 0 auto;
+      }
+    }
+    & div.forfait-contenu {
+      & svg.fleche-next {
+        position: absolute;
+        z-index: 2;
+        right: 90px;
+        top: 70px;
+      }
+    }
+    &::after {
+      height: 550px;
+    }
+  }
+}
+
+@include breakpoint-min(992) {
+  div.vignette-forfait {
+    margin-top: 60px;
+    & div.entete-forfait {
+      margin-bottom: 70px;
+      & h1.titreCommun {
+        font-size: 4.5em;
+        color: var(--orange);
+      }
+      & div.carre-numero {
+        top: 550px;
+      }
+      & div.desc-type-forfait {
+        color: var(--blanc);
+        margin: 20px 0;
+      }
+      & div.wrapper-pointille {
+        top: 60px;
+      }
+      & div.carre-numero {
+        @include setFlex(row, space-between, center);
+        width: 100px;
+        position: absolute;
+        top: 550px;
+        right: 50px;
+        z-index: 1;
+      }
+      & div.commun-imageBackground {
+        margin: 0 auto;
+      }
+    }
+    & div.forfait-contenu {
+      & div.emplacement-forfait {
+        margin-top: 35px;
+      }
+      & svg.fleche-next {
+        right: 90px;
+        top: 30px;
+      }
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 450px;
+      z-index: -1;
+      top: 80px;
+      left: 0px;
+      background-color: var(--marinePale);
+    }
+  }
+}
+
+@include breakpoint-min(1200) {
+  div.vignette-forfait {
+    margin-top: 150px;
+    @include setFlex(row, center, center);
+    & div.entete-forfait {
+      position: static;
+      & div.carre-numero {
+        @include setFlex(row, space-between, center);
+        width: 100px;
+        position: absolute;
+        top: 35px;
+        right: 50px;
+        z-index: 1;
+      }
+    }
+    & div.forfait-contenu {
+      margin-right: 20px;
+      margin-top: 50px;
+      background-color: var(--grisFonce);
+    }
+    & div.forfait-contenu {
+      position: static;
+      & svg.fleche-next {
+        display: block;
+        position: absolute;
+        top: 350px;
+        right: 0px;
+        width: 15%;
+        height: 15%;
+      }
+    }
+    &::after {
+      height: 500px;
+    }
+  }
+}
+
+@include breakpoint-min(1400) {
+  div.vignette-forfait {
+    & div.entete-forfait {
+      & div.carre-numero {
+        top: 70px;
+      }
+    }
+    & div.forfait-contenu {
+      margin-right: 70px;
+      margin-left: 20px;
+    }
+    & svg.fleche-next {
+      display: block;
+      position: absolute;
+      top: 474px;
+      right: 10px;
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+@include breakpoint-min(1920) {
+  div.vignette-forfait {
+    & div.entete-forfait {
+      & div.carre-numero {
+        right: 160px;
+      }
+    }
+    & div.forfait-contenu {
+      margin-right: 170px;
+    }
+    & svg.fleche-next {
+      display: block;
+      position: absolute;
+      top: 380px;
+      right: 90px;
+      width: 150px;
+      height: 150px;
+    }
+  }
+}

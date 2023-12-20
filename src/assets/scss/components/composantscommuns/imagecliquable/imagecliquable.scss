@@ -1,0 +1,124 @@
+// Style pour les images cliquables
+// -----------------------------
+// Nom: Claudia C.Gariépy
+// Matricule: 1474731
+div.lien-sous-categorie {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    & > div.nom-lien {
+        @include setFlex(column, center, center);
+        width: 100%;
+        & h2 {
+            position: absolute;
+            top: 40%;
+            margin: {
+                left: 2rem;
+                right: 2rem;
+                bottom: 0;
+            }
+            font-size: 30px;
+            font-weight: 900;
+            line-height: 1;
+            font-family: "Urbanist", sans-serif;
+            z-index: 10;
+            color: white;
+            padding: 25px;
+        }
+    }
+    & div.lien {
+        background-color: var(--gris);
+        & img {
+            margin: 0 auto;
+            padding: 20px;
+            width: 100%;
+            height: 40%;
+            object-fit: cover;
+            filter: brightness(0.7);
+        }
+    }
+}
+div.wrapper-sous-sous-categorie {
+    div.lien-sous-categorie {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        & > div.nom-lien {
+            @include setFlex(column, center, center);
+            width: 100%;
+            & h2 {
+                position: absolute;
+                top: 40%;
+                margin: {
+                    left: 2rem;
+                    right: 2rem;
+                    bottom: 0;
+                }
+                font-size: 30px;
+                font-weight: 900;
+                line-height: 1;
+                font-family: "Urbanist", sans-serif;
+                z-index: 10;
+                color: white;
+            }
+        }
+        & div.lien {
+            background-color: var(--gris);
+            & img {
+                margin: 0 auto;
+                padding: 20px;
+                width: 100%;
+                height: 40%;
+                object-fit: cover;
+                filter: brightness(0.7);
+            }
+        }
+    }
+}
+
+@include breakpoint-min(1200) {
+    div.lien-sous-categorie {
+        height: 320px;
+        & > div.nom-lien {
+            & h2 {
+                font-size: 40px;
+                padding: 25px;
+            }
+        }
+        & div.lien {
+            & img {
+                padding: 0;
+                width: 100%;
+                height: 320px;
+                object-fit: cover;
+            }
+            & img:hover {
+                filter: brightness(0.4);
+            }
+        }
+    }
+
+    div.wrapper-sous-sous-categorie {
+        div.lien-sous-categorie {
+            height: 320px;
+            & > div.nom-lien {
+                & h2 {
+                    font-size: 40px;
+                    background: rgba(15, 15, 15, 0.76);
+                    padding: 25px;
+                }
+            }
+            & div.lien {
+                & img {
+                    padding: 20px;
+                    width: 100%;
+                    height: 320px;
+                    object-fit: contain;
+                }
+                & img:hover {
+                    filter: brightness(0.4);
+                }
+            }
+        }
+    }
+}

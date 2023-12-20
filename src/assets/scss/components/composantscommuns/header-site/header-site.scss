@@ -1,0 +1,58 @@
+// Style pour le header global du site
+// -----------------------------
+// Nom: Chadrik Bertrand
+// Matricule: 2037079
+
+@import "navigation-mobile/navigation-mobile.scss";
+@import "navigation-desktop/navigation-desktop.scss";
+
+div.header-site {
+  width: 100%;
+  background-color: var(--orangeFonce);
+  & div.nav-desktop-ferme {
+    display: none;
+  }
+  & div.nav-desktop-ouvert {
+    display: none;
+  }
+  & div.nav-ferme {
+    display: none;
+  }
+}
+
+@include breakpoint-min(1200) {
+  div.header-site {
+    background-color: #f5f5f5;
+    width: 320px;
+    position: relative;
+    z-index: 40;
+    & div.nav-desktop-ferme {
+      display: block;
+    }
+    & div.nav-desktop-ouvert {
+      display: block;
+    }
+    & div.nav-ferme {
+      display: block;
+    }
+
+    & div.nav-desktop {
+      @include setFlex(row, start, center);
+      position: fixed;
+    }
+  }
+  div.header-site-mobile {
+    display: none;
+  }
+}
+
+@include breakpoint-min(1400) {
+  div.header-site {
+    width: 380px;
+  }
+}
+@include breakpoint-min(1920) {
+  div.header-site {
+    width: 480px;
+  }
+}

@@ -1,0 +1,156 @@
+// Style pour la page de connexion au compte
+// -----------------------------
+// Nom: Chadrik Bertrand
+// Matricule: 2037079
+div.connexion {
+  & h1 {
+    text-align: center;
+    font-size: 3em;
+  }
+  & > form {
+    @include setFlex(column, center, center);
+    & > div.group {
+      margin-bottom: 50px;
+    }
+  }
+
+  & div.bouton {
+    @include setFlex(column, center, center);
+    & > div.boutons-actions {
+      margin: 2em;
+    }
+  }
+}
+button#submit {
+  position: relative;
+  padding: 1em 2em;
+  margin: 2rem 3rem;
+  width: fit-content;
+  height: fit-content;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 4px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: var(--orangeFonce);
+  transition: all 1000ms;
+  overflow: hidden;
+  outline: 2px solid var(--orangeFonce);
+  &:hover {
+    color: white;
+    transform: scale(1.1);
+    outline: 2px solid var(--orangeFonce);
+    box-shadow: 4px 5px 17px -4px var(--orangeFonce);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--orangeFonce);
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+  &:hover::before {
+    width: 200%;
+  }
+}
+
+div.main {
+  & a.connexion {
+    font-size: 18px;
+    color: #000000;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+    top: -70px;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+
+    &:focus,
+    &:hover {
+      color: #3a3a3a;
+
+      &::after {
+        width: 100%;
+        left: 0%;
+      }
+    }
+    &::after {
+      content: "";
+      pointer-events: none;
+      bottom: -2px;
+      left: 50%;
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background-color: #000000;
+      transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+      transition-duration: 400ms;
+      transition-property: width, left;
+    }
+  }
+}
+
+@include breakpoint-min(1200) {
+  div.main {
+    & a.connexion {
+      font-size: 18px;
+      color: #000000;
+      font-family: inherit;
+      font-weight: 800;
+      cursor: pointer;
+      position: absolute;
+      left: 80%;
+      top: 30px;
+      border: none;
+      background: none;
+      text-transform: uppercase;
+      transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+      transition-duration: 400ms;
+      transition-property: color;
+
+      &:focus,
+      &:hover {
+        color: #3a3a3a;
+
+        &::after {
+          width: 100%;
+          left: 0%;
+        }
+      }
+      &::after {
+        content: "";
+        pointer-events: none;
+        bottom: -2px;
+        left: 50%;
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background-color: #000000;
+        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition-duration: 400ms;
+        transition-property: width, left;
+      }
+    }
+  }
+}
+@include breakpoint-min(1400) {
+  div.main {
+    & a.connexion {
+      left: 90%;
+    }
+  }
+}

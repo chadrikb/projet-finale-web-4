@@ -1,0 +1,29 @@
+// Style pour la couche de remplissage de l'accueil
+// -----------------------------
+// Nom: Claudia C.Gariépy
+// Matricule: 1474731
+div.remplissage {
+    @extend .container-fluid; 
+    @include resetBox;   
+    height: 320px;
+    & > img {
+        height: 320px;
+        width: 100%;
+        object-fit: cover;
+    }
+    & div.decoration {
+        position: relative;
+        & > div.wrapper-pointille:nth-child(1){
+            position: absolute;
+            top: -12px;
+            right: 40vw;
+            z-index: 4;
+        }
+        & > div.wrapper-pointille:nth-child(2){
+            position: absolute;
+            top: 297px;
+            right: 20vw;
+            z-index: 4;
+        }
+    }
+}

@@ -1,0 +1,286 @@
+// Style pour la couche inspiration dans la page accueil
+// -----------------------------
+// Nom: Claudia C.Gariépy
+// Matricule: 1474731
+div.inspiration-accueil {
+    @include setFlex(column, start, start);
+    background-color: var(--marinePale);
+    & > div.inspi-gauche {
+        position: relative;
+        & > div h1 {
+            position: absolute;
+            top: -60px;
+            left: 32px;
+            font-size: 42px;
+            font-weight: 900;
+            color: var(--orange);
+        }
+        & > div.wrapper-pointille {
+            position: absolute;
+            top: -20px;
+            right: 5%;
+        }
+        & > div.paragrapheSlot {
+            padding-top: 3rem;
+            color: white;
+            margin: {
+                left: 32px;
+                right: 32px;
+            }
+        }
+        & > div.commun-imageBackground {
+            margin: 2rem auto;
+        }
+    }
+    & div.inspi-droit {
+        position: relative;
+        margin-top: 7rem;
+        z-index: 0;
+        background-color: white;
+        & div.carre-numero {
+            @include setFlex(row, space-between, center);
+            width: 100px;
+            position: absolute;
+            top: -80px;
+            right: 50px;
+            z-index: -1;
+            &::before {
+                content: "";
+                width: 170px;
+                height: 160px;
+                position: absolute;
+                top: -35px;
+                left: -50px;
+                z-index: -1;
+                background-color: var(--gris);
+            }
+            & > h4 {
+                color: var(--orangeFonce);
+                font-weight: 900;
+                font-family: "Urbanist", sans-serif;
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 70%;
+                    height: 1.5px;
+                    position: absolute;
+                    background-color: var(--orangeFonce);
+                    bottom: 14px;
+                    left: 12px;
+                    z-index: 2;
+                }
+            }
+        }
+        & div:nth-child(2) p {
+            margin-top: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        & div:nth-child(3) p {
+            font-weight: 500;
+            color: var(--grisFonce);
+        }
+        & div:nth-child(4) p {
+            margin-top: 2rem;
+            margin-bottom: 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        & div:nth-child(5) p {
+            margin-top: 1rem;
+            margin-right: 4.5rem;
+            margin-bottom: 3rem;
+        }
+        & > svg.fleche-next {
+            position: absolute;
+            top: 50%;
+            right: 0;
+        }
+    }
+}
+@include breakpoint-min(576) {
+    div.inspiration-accueil {
+        & > div.inspi-gauche {
+            & > div h1 {
+                top: -80px;
+                font-size: 60px;
+            }
+            & > div.wrapper-pointille {
+                right: 25%;
+            }
+        }
+        & div.inspi-droit {
+            width: 90%;
+            margin-bottom: 3rem;
+            & div.carre-numero {
+                @include setFlex(row, space-between, center);
+                top: -80px;
+                right: 23px;
+                position: absolute;
+                z-index: -20;
+                &::before {
+                    content: "";
+                    width: 230px;
+                    height: 211px;
+                    top: -35px;
+                    left: -50px;
+                }
+            }
+        }
+    }
+}
+@include breakpoint-min(768) {
+    div.inspiration-accueil {
+        & > div.inspi-gauche {
+            & > div h1 {
+                top: -80px;
+                font-size: 90px;
+            }
+            & > div.wrapper-pointille {
+                right: 20%;
+            }
+            & > div.paragrapheSlot {
+                padding-top: 5rem;
+                margin: {
+                    left: 8rem;
+                    right: 8rem;
+                }
+            }
+        }
+        & div.inspi-droit {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            & div:nth-child(2) p {
+                margin-top: 3rem;
+            }
+            & div:nth-child(5) p {
+                margin-bottom: 3.5rem;
+            }
+            & div:nth-child(5) p {
+                margin-right: 8rem;
+            }
+            & > svg.fleche-next {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                width: 5rem;
+                height: 5rem;
+            }
+        }
+    }
+}
+
+@include breakpoint-min(992) {
+    div.inspiration-accueil {
+        @include setFlex(row, start, start);
+        & > div.inspi-gauche {
+            width: 45%;
+            & > div h1 {
+                top: -80px;
+                font-size: 60px;
+            }
+            & > div.wrapper-pointille {
+                right: -30px;
+            }
+            & > div.paragrapheSlot {
+                padding-top: 5rem;
+                margin: {
+                    top: 2rem;
+                    left: 32px;
+                    right: 32px;
+                }
+            }
+            & > div.commun-imageBackground {
+                margin: 2.5rem 2rem;
+            }
+        }
+        & div.inspi-droit {
+            margin-bottom: 4rem;
+            & div.carre-numero {
+                @include setFlex(row, space-between, center);
+                top: -40px;
+                right: 20px;
+                &::before {
+                    content: "";
+                    width: 170px;
+                    height: 160px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint-min(1400) {
+    div.inspiration-accueil {
+        & > div.inspi-gauche {
+            width: 35%;
+            & > div.wrapper-pointille {
+                right: -150px;
+            }
+            & > div.paragrapheSlot {
+                padding-top: 5rem;
+                margin: {
+                    left: 2rem;
+                    right: 3rem;
+                }
+            }
+        }
+        & > div.inspi-droit {
+            width: 55%;
+            margin-left: auto;
+            margin-right: auto;
+            & div.carre-numero {
+                @include setFlex(row, space-between, center);
+                top: -30px;
+                right: 12px;
+                &::before {
+                    content: "";
+                    width: 230px;
+                    height: 211px;
+                    top: -35px;
+                    left: -80px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint-min(1920) {
+    div.inspiration-accueil {
+        & > div.inspi-gauche {
+            width: 30%;
+            & > div h1 {
+                top: -120px;
+                font-size: 90px;
+            }
+            & > div.wrapper-pointille {
+                right: -250px;
+            }
+            & > div.paragrapheSlot {
+                padding-top: 5rem;
+                margin: {
+                    left: 2rem;
+                    right: 5rem;
+                }
+            }
+        }
+        & > div.inspi-droit {
+            width: 65%;
+            margin-left: auto;
+            margin-right: auto;
+            & div.carre-numero {
+                @include setFlex(row, space-between, center);
+                top: -30px;
+                right: 34px;
+                &::before {
+                    content: "";
+                    width: 230px;
+                    height: 211px;
+                    left: -70px;
+                }
+            }
+        }
+    }
+}

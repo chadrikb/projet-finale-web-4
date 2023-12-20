@@ -1,0 +1,209 @@
+// importation des styles pour la navigation desktop
+// -----------------------------
+// Nom: Chadrik Bertrand
+// Matricule: 2037079
+@import "./titre-menu/titre-menu.scss";
+@import "animate.css";
+
+// -----------------------------
+// en mobile désactive la navigation desktop
+// -----------------------------
+div.nav-desktop-ouvert {
+  display: none;
+}
+div.nav-ouvert {
+  display: none;
+}
+
+// -----------------------------
+// affiche la navigation desktop en 1200px
+// -----------------------------
+@include breakpoint-min(1200) {
+  div.nav-desktop-ouvert {
+    display: block;
+  }
+  div.nav-desktop-ferme {
+    & > div {
+      & > label {
+        & > svg {
+          width: 35%;
+          height: 35%;
+        }
+      }
+    }
+  }
+
+  div.nav-ouvert {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    & > label {
+      & > svg {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+  .nav-ferme {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    & > label {
+      & > svg {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+  .desktopFerme {
+    display: none !important;
+  }
+  .desktopOuvert {
+    display: block !important;
+  }
+
+  // -----------------------------
+  // afifchage de l'interieur de la navigation desktop ouvert
+  // -----------------------------
+  .parent {
+    background-color: var(--gris);
+    display: grid;
+    grid-template-columns: 1.5fr repeat(3, 1fr) 1.5fr;
+    grid-template-rows: repeat(3, 1fr) 2fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 5;
+  }
+  // -----------------------------
+  // Section div1 menu principal
+  // -----------------------------
+  .div1 {
+    grid-area: 1 / 1 / 5 / 2;
+    background-color: var(--noir);
+    & div.menu-princ {
+      height: 100%;
+      @include setFlex(column, space-around, center);
+      & a {
+        & > p {
+          color: white;
+          cursor: pointer;
+          font-size: 2em;
+          margin-bottom: 0;
+          &:hover {
+            text-shadow: -10px 5px rgba(128, 128, 128, 0.5);
+          }
+        }
+      }
+    }
+  }
+  // -----------------------------
+  // Section div2 section menu secondaire
+  // -----------------------------
+  .div2 {
+    grid-area: 1 / 2 / 5 / 5;
+    background-color: var(--orangeFonce);
+    @include setFlex(row, start, center);
+    & div.menu-secondaire {
+      width: 100%;
+      margin-left: 10px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 1fr;
+      & > * {
+        text-align: center;
+      }
+      & a {
+        & p {
+          margin-bottom: 50px;
+          font-size: 1.5em;
+          &:hover {
+            text-shadow: -10px 5px rgba(255, 255, 255, 0.5);
+          }
+        }
+      }
+    }
+  }
+  // -----------------------------
+  // Section div3 section dashboard
+  // -----------------------------
+  .div3 {
+    grid-area: 4 / 5 / 6 / 6;
+    background-color: var(--gris);
+    @include setFlex(row, space-around, center);
+    flex-wrap: wrap;
+    & div.vignette-dashboard {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  // -----------------------------
+  // Section div4
+  // -----------------------------
+  .div4 {
+    grid-area: 1 / 5 / 4 / 6;
+    background-color: var(--grisFonce);
+  }
+  // -----------------------------
+  // Section forfait
+  // -----------------------------
+
+  .div5 {
+    grid-area: 5 / 3 / 6 / 5;
+    background-color: var(--noir);
+    @include setFlex(column, center, center);
+    font-size: 3em;
+    color: white;
+  }
+
+  // -----------------------------
+  // Section carte
+  // -----------------------------
+  .div6 {
+    grid-area: 5 / 1 / 6 / 3;
+    @include setFlex(row, space-around, center);
+    background-color: var(--blanc);
+    div.svg {
+      width: 20%;
+      position: relative;
+      & img.map {
+        width: 100%;
+        margin: 0;
+      }
+      & img.pointeur {
+        width: 30%;
+        position: absolute;
+        top: -26px;
+        left: 60px;
+      }
+    }
+    & > p {
+      font-size: 2em;
+      margin-bottom: 0;
+      padding-right: 50px;
+    }
+  }
+}
+
+@include breakpoint-min(1400) {
+  .div6 {
+    div.svg {
+      & img.pointeur {
+        top: -35px;
+        left: 75px;
+      }
+    }
+  }
+}

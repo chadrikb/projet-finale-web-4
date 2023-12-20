@@ -1,0 +1,64 @@
+@import "date-calendrier/date-calendrier.scss";
+
+// Style pour la section clanedrier du dashboard
+// -----------------------------
+// Nom: Chadrik Bertrand
+// Matricule: 2037079
+// -----------------------------
+// Nom: Claudia C.Gariépy
+// Matricule: 1474731
+div.evenement-fav {
+    & div.titre-entete-evenement-fav {
+        & h1 {
+            font-size: 1.5em;
+            position: relative;
+            &::after {
+                content: "";
+                display: block;
+                width: 40px;
+                height: 400px;
+                background-color: var(--vertSature);
+                position: absolute;
+                top: 17px;
+                left: 0px;
+                z-index: -1;
+            }
+        }
+    }
+    & div.mois {
+        margin: 0 auto;
+        width: 65%;
+        @include setFlex(row, space-between, center);
+        & div {
+            width: fit-content;
+            & p {
+                margin: 0;
+            }
+        }
+    }
+    & div.liste-date {
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    & div.titre-evenement {
+        & h1 {
+            font-size: 1.2em;
+        }
+    }
+    & div.sous-titre-evenement {
+    }
+    & div.titre-evenement {
+    }
+    & div.location-evenement {
+    }
+    & div.desc-evenement {
+    }
+    div.bouton-evenement {
+        width: 100%;
+        height: 250px;
+        margin: 0;
+        padding: 125px 0;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+}

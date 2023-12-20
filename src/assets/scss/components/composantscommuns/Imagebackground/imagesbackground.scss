@@ -1,0 +1,53 @@
+// Style image avec un backgground gris
+// -----------------------------
+// Nom: Claudia C.Gariépy
+// Matricule: 1474731
+div.commun-imageBackground {
+    position: relative;
+    width: 288px;
+    height: 208px;
+    & img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 248px;
+        height: 180px;
+        object-fit: cover;
+        z-index: 3;
+    }
+    &::after {
+        content: "";
+        display: block;
+        width: 248px;
+        height: 155px;
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+        left: 0;
+        background-color: var(--grisFonce);
+    }
+    @include breakpoint-min(576) {
+        width: 512px;
+        height: 358px;
+        & img {
+            width: 437px;
+            height: 292px;
+        }
+        &::after {
+            width: 437px;
+            height: 292px;
+        }
+    }
+    @include breakpoint-min(992) {
+        width: 363px;
+        height: 254px;
+        & img {
+            width: 310px;
+            height: 207px;
+        }
+        &::after {
+            width: 310px;
+            height: 207px;
+        }
+    }
+}

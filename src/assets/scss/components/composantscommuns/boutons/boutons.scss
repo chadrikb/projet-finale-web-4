@@ -1,0 +1,48 @@
+// Style pour les boutons de l'application
+// -----------------------------
+// Nom: Chadrik Bertrand
+// Matricule: 2037079
+// -----------------------------
+// Nom: Claudia C.Gariépy
+// Matricule: 1474731
+
+div.boutons-actions {
+  cursor: pointer;
+  position: relative;
+  padding: 1em 2em;
+  margin: 2rem 3rem;
+  width: fit-content;
+  height: fit-content;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 4px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: var(--orangeFonce);
+  transition: all 1000ms;
+  overflow: hidden;
+  outline: 2px solid var(--orangeFonce);
+  &:hover {
+    color: white;
+    transform: scale(1.1);
+    outline: 2px solid var(--orange);
+    box-shadow: 4px 5px 17px -4px var(--orangeFonce);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--orange);
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+  &:hover::before {
+    width: 200%;
+  }
+}

@@ -1,0 +1,251 @@
+// Style pour la couche inspiration catégorie
+// -----------------------------
+// Nom: Claudia C.Gariépy
+// Matricule: 1474731
+div.inspiration-categorie div.contenu-inspi {
+    position: relative;
+    z-index: 0;
+    background-color: var(--orange);
+    & > div h1 {
+        @include resetBox;
+        position: relative;
+        top: -30px;
+        margin-left: 32px;
+        font-size: 40px;
+        font-weight: 900;
+    }
+    & > div.wrapper-infos {
+        @include setFlex(column, center, left);
+        & > div.wrapper-pointille {
+            position: absolute;
+            top: -15px;
+            right: 0;
+            z-index: -1;
+        }
+        & > div.localisation {
+            @include setFlex(row, start, center);
+            margin: {
+                top: 3rem;
+                left: 28px;
+                right: 32px;
+            }
+            & > h3 {
+                @include resetBox;
+                margin-left: 8px;
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 1;
+                font-family: "Urbanist", sans-serif;
+            }
+        }
+        & > div.boutons-actions{
+            background-color: black;
+            color: white;
+            &::before{
+                background-color: var(--marinePale);
+            }
+        }
+        & > h2 {
+            margin: {
+                top: 2rem;
+                left: 2rem;
+                right: 2rem;
+            }
+            font-size: 36px;
+            line-height: 1.2;
+            font-family: "Urbanist", sans-serif;
+        }
+        & div.paragrapheSlot {
+            margin: {
+                top: 1rem;
+                left: 2rem;
+                right: 2rem;
+                bottom: 0;
+            }
+        }
+        & > div.boutons-actions {
+            margin: 8px auto;
+            width: 82%;
+            text-align: center;
+        }
+    }
+    & > div.imageInspiration {
+        position: relative;
+        height: 300px;
+        & > img {
+            margin: 16px auto;
+            width: 296px;
+            height: 239px;
+        }
+        & > div.wrapper-pointille {
+            position: absolute;
+            top: 215px;
+        }
+        & > svg.fleche-next {
+            position: absolute;
+            right: 0;
+            top: 119.5px;
+        }
+    }
+}
+div.deco-inspi {
+    display: none;
+}
+
+@include breakpoint-min(576) {
+    div.inspiration-categorie div.contenu-inspi {
+        & > div h1 {
+            top: -45px;
+            font-size: 60px;
+        }
+        & > div.imageInspiration {
+            & > img {
+                object-fit: cover;
+                padding: {
+                    left: 2rem;
+                    right: 2rem;
+                }
+                width: 100%;
+            }
+        }
+    }
+}
+
+@include breakpoint-min(1200) {
+    div.inspiration-categorie {
+        position: relative;
+        @include setFlex(row, start, start);
+        & > div.contenu-inspi {
+            @include setFlex(row, left, left);
+            & > div h1 {
+                color: white;
+                margin-left: 4rem;
+            }
+            & > div.wrapper-infos {
+                width: 60%;
+                & > div.wrapper-pointille {
+                    position: absolute;
+                    top: -12px;
+                    left: 50%;
+                }
+                & > div.localisation {
+                    & > h3 {
+                        @include resetBox;
+                        font-size: 44px;
+                        font-weight: 700;
+                    }
+                    margin: {
+                        top: 0;
+                        left: 4rem;
+                    }
+                }
+                & > h2 {
+                    margin: {
+                        left: 4rem;
+                    }
+                    font-size: 36px;
+                }
+                & div.paragrapheSlot {
+                    margin: {
+                        top: 1rem;
+                        left: 4rem;
+                        right: 2rem;
+                        bottom: 0;
+                    }
+                }
+                & > div.boutons-actions {
+                    margin: {
+                        left: 4rem;
+                        bottom: 3rem;
+                        top: 1rem;
+                    };
+                    width: 45%;
+                    text-align: center;
+                }
+            }
+            & > div.imageInspiration {
+                position: relative;
+                width: 40%;
+                & > img {
+                    margin: {
+                        top: 140px;
+                        right: 0;
+                        left: auto;
+                    };
+                    padding-right: 0;
+                    padding-left: 0;
+                    width: 380px;
+                    height: 380px;
+                }
+                & > div.wrapper-pointille {
+                    top: 500px;
+                    left: calc(9% + 70px);
+                }
+                & > svg.fleche-next {
+                    right: 0;
+                    top: 315px;
+                    width: 5rem;
+                    height: 5rem;
+                }
+            }
+        }
+    }
+    div.deco-inspi {
+        display: block;
+        width: 40%;
+        & > div.wrapper-pointille {
+            position: absolute;
+            top: -110px;
+            left: 6%;
+        }
+        & > svg.cercleSvgCommun:nth-child(2) {
+            position: absolute;
+            top: -170px;
+            left: 30%;
+            z-index: -1;
+        }
+        & > svg.cercleSvgCommun:nth-child(3) {
+            position: absolute;
+            top: -110px;
+            left: 0;
+            z-index: -1;
+        }
+    }
+}
+
+@include breakpoint-min(1600){
+    div.deco-inspi {
+        display: block;
+        width: 40%;
+        & > div.wrapper-pointille {
+            position: absolute;
+            top: -110px;
+            left: 5%;
+        }
+        & > svg.cercleSvgCommun:nth-child(2) {
+            position: absolute;
+            top: -140px;
+            left: 30%;
+            z-index: -1;
+        }
+        & > svg.cercleSvgCommun:nth-child(3) {
+            position: absolute;
+            top: -180px;
+            left: 6%;
+            z-index: -1;
+        }
+    }
+}
+
+@include breakpoint-min(1920){
+    div.inspiration-categorie > div.contenu-inspi > div h1 {
+        top: -60px;
+        font-size: 90px;
+    }
+    div.inspiration-categorie div.contenu-inspi div.imageInspiration img {
+        margin-right: 9rem;
+        width: 450px;
+        height: 450px;
+        margin-top: 6rem;
+    }
+}

@@ -1,0 +1,21 @@
+// Style pour les pointilles
+// -----------------------------
+// Nom: Claudia C.Gariépy
+// Matricule: 1474731
+div.wrapper-pointille {
+  & > svg.range1 {
+    display: block;
+    margin-bottom: 2px;
+  }
+  & > svg.range2 {
+    display: block;
+    margin-bottom: 2px;
+  }
+  & > svg.range3 {
+    display: block;
+    margin-bottom: 2px;
+  }
+  & > svg.range4 {
+    display: block;
+  }
+}
